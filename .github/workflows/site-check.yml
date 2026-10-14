@@ -1,0 +1,31 @@
+name: Site check
+on:
+  schedule:
+    - cron: '27,57 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  smoke:
+    if: github.event_name == 'workflow_dispatch' || vars.PRODUCTION_MONITORING == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.18.0'
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:smoke
+        env:
+          SMOKE_URL: https://playground.smtmtc.com
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: production-failure
+          path: |
+            playwright-report/
+            test-results/
+          retention-days: 7

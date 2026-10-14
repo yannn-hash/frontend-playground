@@ -1,0 +1,124 @@
+/* quest: styles owned by this subsystem. */
+
+.quest-preview {
+  padding: 18px 22px 24px;
+}
+.quest-system {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font:
+    8px Consolas,
+    monospace;
+  color: #9eafaa;
+  letter-spacing: 1px;
+}
+.status-dot {
+  width: 5px;
+  height: 5px;
+  background: #90e4cc;
+  border-radius: 50%;
+  display: inline-block;
+}
+.quest-status {
+  margin-left: auto;
+  padding: 3px 6px;
+  border: 1px solid #90e4cc40;
+  border-radius: 4px;
+  color: #90e4cc;
+}
+.quest-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px 0 16px;
+}
+.quest-glyph {
+  display: grid;
+  place-items: center;
+  width: 68px;
+  height: 68px;
+  border: 1px solid #90e4cc60;
+  background: #90e4cc12;
+  border-radius: 18px;
+  color: #90e4cc;
+}
+.quest-glyph.error {
+  border-color: #ffb5ae;
+  color: #ffb5ae;
+}
+.quest-center h3 {
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  margin: 14px 0 6px;
+}
+.quest-center p {
+  font-size: 11px;
+  color: #a4b3ae;
+  line-height: 1.8;
+}
+.quest-scenarios {
+  display: flex;
+  gap: 7px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.quest-scenarios button {
+  background: #182b23;
+  color: #b2cfc2;
+  border: 1px solid #90e4cc30;
+  padding: 7px 12px;
+  border-radius: 6px;
+  font-size: 10px;
+  min-height: 32px;
+}
+.quest-scenarios button[aria-pressed='true'] {
+  background: #90e4cc20;
+  border-color: #90e4cc;
+}
+.event-trace {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 15px;
+}
+.event-trace > div {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  border: 1px solid #3a5042;
+  background: #131e17;
+  padding: 6px 8px;
+  border-radius: 5px;
+  font: 9px monospace;
+}
+.event-index {
+  color: #75867c;
+}
+.event-request {
+  color: #8dada1;
+}
+.event-trace svg {
+  color: #587064;
+}
+.state-label {
+  color: #a5beb0;
+}
+.state-label.success {
+  color: #cefa69;
+}
+.state-label.error {
+  color: #ffb5ae;
+}
+@media (max-width: 767px) {
+  .quest-preview {
+    padding: 16px 12px;
+  }
+  .quest-system {
+    font-size: 7px;
+    letter-spacing: 0.5px;
+  }
+}

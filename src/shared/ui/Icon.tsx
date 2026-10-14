@@ -1,0 +1,83 @@
+import {
+  Box,
+  Move,
+  Grid2X2,
+  MonitorSmartphone,
+  Route,
+  Sparkles,
+  ArrowUpRight,
+  ArrowRight,
+  ArrowLeft,
+  Check,
+  CheckCheck,
+  ChevronDown,
+  Code2,
+  Search,
+  Menu,
+  X,
+  Play,
+  RotateCcw,
+  Lightbulb,
+  Terminal,
+  ExternalLink,
+  BookOpen,
+  ShieldCheck,
+  Target,
+  Maximize2,
+  ChevronRight,
+  Clock,
+  PanelLeft,
+  Copy,
+  CheckCircle2,
+  AlertCircle,
+  Trophy,
+  Github,
+} from 'lucide-react';
+const icons = {
+  box: Box,
+  move: Move,
+  grid: Grid2X2,
+  devices: MonitorSmartphone,
+  route: Route,
+  sparkles: Sparkles,
+  arrowUp: ArrowUpRight,
+  arrowRight: ArrowRight,
+  arrowLeft: ArrowLeft,
+  check: Check,
+  checks: CheckCheck,
+  down: ChevronDown,
+  code: Code2,
+  search: Search,
+  menu: Menu,
+  close: X,
+  play: Play,
+  reset: RotateCcw,
+  hint: Lightbulb,
+  terminal: Terminal,
+  external: ExternalLink,
+  book: BookOpen,
+  shield: ShieldCheck,
+  target: Target,
+  expand: Maximize2,
+  right: ChevronRight,
+  clock: Clock,
+  panel: PanelLeft,
+  copy: Copy,
+  success: CheckCircle2,
+  error: AlertCircle,
+  trophy: Trophy,
+  github: Github,
+};
+export type IconName = keyof typeof icons;
+export function Icon({
+  name,
+  size = 18,
+  ...props
+}: {
+  name: string;
+  size?: number;
+  className?: string;
+}) {
+  const Component = icons[name as IconName] ?? Code2;
+  return <Component size={size} strokeWidth={1.7} aria-hidden="true" {...props} />;
+}

@@ -1,0 +1,29 @@
+.blueprint {
+  width: calc(100% - 48px);
+  max-width: 360px;
+  margin: 32px auto;
+}
+.tile {
+  min-height: 64px;
+  border: 1px solid #c5a8ff80;
+  background: #c5a8ff18;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  box-sizing: border-box;
+  color: #ded0ff;
+  font: 10px monospace;
+  letter-spacing: 1px;
+}
+.tile span {
+  opacity: 0.45;
+  font-size: 24px;
+}
+.main {
+  background: #c5a8ff30;
+}
+.sidebar {
+  background: #c5a8ff10;
+}

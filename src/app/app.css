@@ -1,0 +1,163 @@
+/* app: styles owned by this subsystem. */
+
+.site-header {
+  height: 84px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 36px;
+  gap: 16px;
+  background: #101312;
+  position: relative;
+  z-index: 2;
+}
+.brand {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.brand-mark {
+  height: 40px;
+  width: 40px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #cefa6940;
+  background: #cefa6908;
+  border-radius: 10px;
+  color: var(--accent);
+}
+.brand strong {
+  font-size: 16px;
+  letter-spacing: -0.4px;
+}
+.brand-slash {
+  color: #617058;
+  margin: 0 5px;
+}
+.brand-word {
+  font-weight: 400;
+  color: var(--muted);
+}
+.brand small {
+  display: block;
+  font:
+    8px Consolas,
+    monospace;
+  letter-spacing: 2px;
+  color: #7f8c81;
+  margin-top: 4px;
+}
+.header-right {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+.global-progress {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 11px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.global-progress > svg {
+  color: var(--accent);
+}
+.global-progress strong {
+  font-weight: 500;
+  color: var(--text);
+  font:
+    12px Consolas,
+    monospace;
+}
+.global-progress strong span {
+  color: #7f8c81;
+}
+.portfolio-link {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 14px;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  font-size: 12px;
+}
+.portfolio-link:hover {
+  border-color: var(--accent);
+}
+.app-layout {
+  display: grid;
+  grid-template-columns: 300px minmax(0, 1fr);
+  max-width: 1800px;
+  margin: auto;
+  min-height: calc(100vh - 84px);
+}
+.main-column {
+  min-width: 0;
+}
+.storage-notice {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #453427;
+  padding: 12px 25px;
+  font-size: 12px;
+  color: #ffdfbd;
+}
+@media (min-width: 1440px) {
+  .app-layout {
+    grid-template-columns: 320px minmax(0, 1fr);
+  }
+}
+@media (max-width: 767px) {
+  .site-header {
+    height: 72px;
+    padding: 0 16px;
+  }
+  .brand {
+    gap: 8px;
+  }
+  .brand-mark {
+    width: 34px;
+    height: 34px;
+  }
+  .brand strong {
+    font-size: 14px;
+  }
+  .brand small {
+    font-size: 6px;
+    letter-spacing: 1.2px;
+  }
+  .brand-word,
+  .brand-slash {
+    display: none;
+  }
+  .header-right {
+    gap: 5px;
+  }
+  .global-progress {
+    font-size: 10px;
+    gap: 5px;
+  }
+  .global-progress strong {
+    font-size: 10px;
+  }
+  .portfolio-link {
+    font-size: 10px;
+    padding: 0 9px;
+    min-height: 34px;
+    margin-left: 5px;
+  }
+  .app-layout {
+    display: block;
+  }
+  .storage-notice {
+    padding: 10px 16px;
+    font-size: 11px;
+  }
+}
+.global-progress strong {
+  white-space: nowrap;
+}

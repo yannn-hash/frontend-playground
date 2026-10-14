@@ -1,0 +1,17 @@
+:root {
+  color-scheme: dark;
+  --bg: #101312;
+  --surface: #191e1c;
+  --raised: #222925;
+  --text: #eff1e8;
+  --muted: #a6b0a8;
+  --accent: #cefa69;
+  --border: #343d35;
+  --error: #ffb5ae;
+  --radius: 12px;
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-synthesis: none;
+  font-size: 16px;
+  line-height: 1.5;
+}

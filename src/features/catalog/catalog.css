@@ -1,0 +1,246 @@
+/* catalog: styles owned by this subsystem. */
+
+.catalog {
+  padding: 30px 22px 24px;
+  background: #131715;
+}
+.desktop-catalog {
+  border-right: 1px solid var(--border);
+}
+.catalog-heading {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+.catalog-heading .eyebrow {
+  color: #8e9c8f;
+  margin-bottom: 11px;
+  font-size: 9px;
+}
+.catalog h2 {
+  font-size: 22px;
+  line-height: 1.24;
+  letter-spacing: -0.7px;
+  font-weight: 550;
+}
+.catalog h2 span {
+  color: var(--accent);
+}
+.search-field {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  border: 1px solid var(--border);
+  background: #191e1c;
+  border-radius: 8px;
+  height: 42px;
+  padding: 0 12px;
+  color: #778479;
+}
+.search-field:focus-within {
+  border-color: var(--accent);
+}
+.search-field input {
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  font-size: 12px;
+  outline: none;
+}
+.search-field input::placeholder {
+  color: #8b978d;
+}
+.search-field kbd {
+  border: 1px solid var(--border);
+  padding: 0 5px;
+  font: 10px monospace;
+  border-radius: 3px;
+}
+.catalog-filters {
+  display: flex;
+  gap: 4px;
+  margin: 15px -2px 26px;
+}
+.catalog-filters button {
+  font-size: 10px;
+  background: none;
+  padding: 5px 9px;
+  border-radius: 5px;
+  min-height: 32px;
+  color: #9ca99f;
+}
+.catalog-filters button[aria-pressed='true'] {
+  background: #cefa6918;
+  color: var(--accent);
+}
+.catalog-filters button:hover {
+  background: var(--raised);
+}
+.catalog-count {
+  display: flex;
+  justify-content: space-between;
+  font:
+    9px Consolas,
+    monospace;
+  letter-spacing: 1px;
+  color: #7e8b80;
+  margin-bottom: 12px;
+}
+.game-list {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.game-card {
+  text-align: left;
+  width: 100%;
+  border: 1px solid #303931;
+  padding: 15px 16px 13px;
+  background: #181d1a;
+  border-radius: 9px;
+  position: relative;
+}
+.game-card:hover {
+  background: #202821;
+  border-color: #54634f;
+}
+.game-card.active {
+  border-color: #a7c858;
+  background: linear-gradient(115deg, #cefa6913, #cefa6904);
+}
+.game-card.active:before {
+  content: '';
+  position: absolute;
+  width: 3px;
+  height: 32px;
+  background: var(--accent);
+  left: -1px;
+  top: 34px;
+  border-radius: 0 3px 3px 0;
+}
+.game-card-top {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 10px;
+}
+.game-icon {
+  width: 31px;
+  height: 31px;
+  display: grid;
+  place-items: center;
+  border-radius: 7px;
+  background: color-mix(in srgb, var(--game-accent) 10%, transparent);
+  color: var(--game-accent);
+}
+.game-card-top .difficulty {
+  margin-left: auto;
+}
+.game-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.25px;
+}
+.game-title svg {
+  color: #697969;
+}
+.game-card.active .game-title svg {
+  color: var(--accent);
+}
+.game-subtitle {
+  display: block;
+  font-size: 11px;
+  color: #a2aea4;
+  margin-top: 4px;
+  line-height: 1.55;
+}
+.game-card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #ffffff09;
+  margin-top: 11px;
+  padding-top: 9px;
+  font:
+    9px Consolas,
+    monospace;
+  color: #8b988c;
+  letter-spacing: 0.2px;
+}
+.mission-dots {
+  display: flex;
+  gap: 4px;
+}
+.mission-dots i {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #4e5b4e;
+}
+.mission-dots i.done {
+  background: var(--game-accent);
+}
+.catalog-footer {
+  display: flex;
+  gap: 9px;
+  margin-top: 26px;
+  color: #8e9b8f;
+  font-size: 10px;
+  line-height: 1.7;
+}
+.catalog-footer svg {
+  margin-top: 4px;
+}
+.catalog-footer p span {
+  color: #728075;
+}
+.empty-results {
+  padding: 20px 8px;
+  font-size: 13px;
+  color: var(--muted);
+}
+.catalog-drawer {
+  padding: 0;
+  border: 1px solid var(--border);
+  max-height: 100dvh;
+  height: 100dvh;
+  max-width: min(90vw, 360px);
+  width: 360px;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+.catalog-drawer::backdrop {
+  background: #0009;
+  backdrop-filter: blur(4px);
+}
+.catalog-drawer .catalog {
+  min-height: 100%;
+  width: 100%;
+}
+@media (min-width: 1440px) {
+  .catalog {
+    padding: 32px 26px;
+  }
+}
+@media (max-width: 767px) {
+  .desktop-only,
+  .desktop-catalog {
+    display: none;
+  }
+}
+.catalog-filters button {
+  min-height: 44px;
+}
+@media (min-width: 768px) {
+  .site-header .mobile-only,
+  .catalog .mobile-only,
+  .player .mobile-only {
+    display: none;
+  }
+}

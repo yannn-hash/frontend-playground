@@ -1,0 +1,39 @@
+.dock {
+  width: 300px;
+  height: 220px;
+  margin: 36px auto;
+  padding: 0;
+  border: 1px dashed #53718c;
+  box-sizing: content-box;
+  gap: 12px;
+  background: #97cbff08;
+}
+.robot {
+  width: 84px;
+  height: 70px;
+  flex: 0 0 84px;
+  box-sizing: border-box;
+  border: 1px solid #97cbff;
+  background: #203446;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4px;
+  border-radius: 12px;
+  color: #97cbff;
+}
+.robot-eyes {
+  font: bold 48px monospace;
+  line-height: 32px;
+  letter-spacing: 8px;
+  margin-left: 8px;
+}
+.robot small {
+  font: 9px monospace;
+  letter-spacing: 1px;
+}
+body[data-mission='0'] .robot:nth-child(n + 4),
+body[data-mission='1'] .robot:nth-child(n + 4) {
+  display: none;
+}
